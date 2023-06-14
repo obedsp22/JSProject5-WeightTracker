@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Data Page</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="row p-3 head">
+        <header class="col-7">
+            <h1 class="fs-3 text-center">Weight Tracker</h1>
+        </header>
+        <nav class="col top">
+            <a href="index.html">HOME</a>
+            <a href="register.html">REGISTER WEIGHT</a>
+            <a href="#" class="active">SHOW DATA</a>
+            <a href="contact.html">CONTACT US</a>
+        </nav>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="registerinfo">
+            <h2 class="text-center">All Your Data Here</h2>
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+            <h3 class="mt-5 fw-light">Weight Measurements</h3>
+            <p>Here you can check all data  you have saved.</p>
+            
+            <label id="cap">Stored Data</label>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="name">First Name</th>
+                        <th class="name">Last Name</th>
+                        <th class="name">Phone Number</th>
+                        <th>Picture</th>
+                        <th class="weight">Weight</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="table">
+                    <tr id="nodata" class="text-center">
+                        <td colspan="6">No Data to display</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="text-center">
+                        <td colspan="6">Weight Values and Dates</td>
+                    </tr>
+                </tfoot>
+
+            </table>
+            <div class="bg-dark text-white info text-center">
+                <div class="row">
+                    <div class="col">
+                        <h5>About</h5>
+                        <p >We Strive to deliver a level of service that exceeds the expectations of our customers.</p>
+                        <p> If you have any questions about our products or services, please do not hesitate to contact us.
+                            We have friendly, knowledgeable representatives available seven days a week to assist you.</p>
+                    </div>
+                    <div class="col">
+                        <h5>Tweets</h5>
+                        <p><span class="fw-bold span">Tweet @</span> Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                            parturient montes.</p>
+                        <p><span class="fw-bold span">Tweet @</span> Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi
+                            vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Cras ultricies mi
+                            eu turpis hendrerit fringilla.</p>
+                    </div>
+                    <div class="col-2">
+                        <h5>Mailing List</h5>
+                        <p>Subscribe to our mailing list for offers, news, updates, and more!</p>
+                        <input type="email" class="form-control mail" id="email">
+                        <button class="btn btn-dark bg-dark bg-opacity-25 border mail my-3" type="button" onclick="subscribe()">Subscribe</button>
+                    </div>
+                    <div class="col">
+                        <h5>Social</h5>
+                        <address>123 Business Way <br>San Francisco, CA 94108 <br>USA</address>
+                        <p>Phone:(888) 123-4567 <br>Fax:(887) 123-4567</p>
+                        <i class="bi bi-twitter icon"></i>
+                        <i class="bi bi-facebook icon"></i>
+                        <i class="bi bi-envelope-paper-heart-fill icon"></i>
+                        <i class="bi bi-phone-fill icon"></i>
+                    </div>
+                </div>
+            </div>
+            <footer class="text-center bg-dark bg-opacity-25 p-2">
+                <p>&copy; Copyright ABC COMPANY ALL RIGHTS RESERVED.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="myscript.js"></script>
+    <script>
+        window.onload = function () {
+            displayData();
+        }
+    </script>
+</body>
+
+</html>

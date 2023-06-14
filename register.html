@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="row p-3 head">
+        <header class="col-7">
+            <h1 class="fs-3 text-center">Weight Tracker</h1>
+        </header>
+        <nav class="col top">
+            <a href="index.html">HOME</a>
+            <a href="#" class="active">REGISTER WEIGHT</a>
+            <a href="display.html">SHOW DATA</a>
+            <a href="contact.html">CONTACT US</a>
+        </nav>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="registerinfo">
+            <h2 class="text-center">Register your weight</h2>
+            <p class="text-center reg">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque
+                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                vitae
+                dicta sunt explicabo.</p>
+            <div class="row">
+                <div class="col-7 mx-4">
+                    <h3>Enter your information</h3>
+                    <p>Our friendly customer service represtantives are committed to answering all your questions and
+                        meeting any need you may have. We would love to hear from you! Please fill out the form below so
+                        we
+                        may assist you.</p>
+                    <div class="row">
+                        <div class="col">
+                            <label for="name">First Name: <span class="red">*</span></label>
+                            <input type="text" class="form-control" id="fname" placeholder="Your First Name: *"
+                                required>
+                        </div>
+                        <div class="col">
+                            <label for="name">Last name: <span class="red">*</span></label>
+                            <input type="text" class="form-control" id="lname" placeholder="Your Last name: *" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="phone">Phone Number: <span class="red">*</span></label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Phone Number: *" required>
+                        </div>
+                        <div class="col">
+                            <label for="weight">Weight(lbs): <span class="red">*</span></label>
+                            <input type="number" class="form-control" id="weight" placeholder="Your Weight: *" value="0"
+                                min="1" required>
+                        </div>
+                        <div class="col">
+                            <label for="date">Date of Measurement: <span class="red">*</span></label>
+                            <input type="date" class="form-control" id="date" required>
+                        </div>
+                    </div>
+                    <label for="picture" class="mt-5">Picture: <span class="red">*</span></label>
+                    <div id="background">
+                        <img src="images/question.png" alt="QuestionMark" id="question">
+                        <div id="userpic"></div>
+                    </div>
+                    <input type="file" id="picture" class="form-control w-50 mt-3" multiple
+                        accept=".jpg, .jpeg, .png , .jfif, .tiff" required>
+                    <br>
+                    <button class="btn btn-dark bg-dark bg-opacity-25 border mb-5" onclick="getData() ">Submit</button>
+
+                </div>
+                <div class="col-3 mt-3">
+                    <h3>Your data is important</h3>
+                    <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et
+                        voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a
+                        sapiente
+                        delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
+                        asperiores repellat.</p>
+                    <p>
+                        Itaque earum rerum hic tenetur a sapiente
+                        delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
+                        asperiores repellat.Itaque earum rerum hic tenetur a sapiente
+                        delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus
+                        asperiores repellat.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-dark text-white info text-center">
+            <div class="row">
+                <div class="col">
+                    <h5>About</h5>
+                    <p>We Strive to deliver a level of service that exceeds the expectations of our customers.</p>
+                    <p> If you have any questions about our products or services, please do not hesitate to contact us.
+                        We have friendly, knowledgeable representatives available seven days a week to assist you.</p>
+                </div>
+                <div class="col">
+                    <h5>Tweets</h5>
+                    <p><span class="fw-bold span">Tweet @</span> Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                        parturient montes.</p>
+                    <p><span class="fw-bold span">Tweet @</span> Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi
+                        vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Cras ultricies mi
+                        eu turpis hendrerit fringilla.</p>
+                </div>
+                <div class="col-2">
+                    <h5>Mailing List</h5>
+                    <p>Subscribe to our mailing list for offers, news, updates, and more!</p>
+                    <input type="email" class="form-control mail" id="email">
+                    <button class="btn btn-dark bg-dark bg-opacity-25 border mail my-3" type="button" onclick="subscribe()">Subscribe</button>
+                </div>
+                <div class="col">
+                    <h5>Social</h5>
+                    <address>123 Business Way <br>San Francisco, CA 94108 <br>USA</address>
+                    <p>Phone:(888) 123-4567 <br>Fax:(887) 123-4567</p>
+                    <i class="bi bi-twitter icon"></i>
+                    <i class="bi bi-facebook icon"></i>
+                    <i class="bi bi-envelope-paper-heart-fill icon"></i>
+                    <i class="bi bi-phone-fill icon"></i>
+                </div>
+            </div>
+        </div>
+        <footer class="text-center bg-dark bg-opacity-25 p-2">
+            <p>&copy; Copyright ABC COMPANY ALL RIGHTS RESERVED.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="myscript.js"></script>
+</body>
+
+</html>
